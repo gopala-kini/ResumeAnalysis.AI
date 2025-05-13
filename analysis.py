@@ -12,7 +12,8 @@ def profile(resume,job_desc):
         st.markdown("Resume has been Uploaded")
     else:
         st.warning("Resume Missing")
-    response=model.generate_content(f'''Act as a HR or OPs head in AI domain and compare {resume} with {job_desc}and suggest= what are the chances of getting selected?''')
+    response=model.generate_content(f'''Act as a HR or OPs head in AI domain and compare {resume} with {job_desc}and suggest= what are the chances of getting selected?
+    And also suggest the ATS score. What can be done to improve the ATS score? Key points, that should not be missed in Resume''')
     #Return the result
     return(st.write(response.text))
     
